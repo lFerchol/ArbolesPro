@@ -1,0 +1,7 @@
+#ifndef _HERRAMIENTAS_H_
+#define _HERRAMIENTAS_H_
+#include <gtk-2.0/gtk/gtk.h>
+void cerrar(GtkWidget*widget,gpointer ventana);
+void mostrar_informacion(char mensaje[200],gpointer window);
+void mostrar_error(char mensaje[200],gpointer window);
+#endif

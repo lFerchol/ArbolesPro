@@ -1,0 +1,20 @@
+# La siguiente no es necesariamente requerida, se agrega para
+# mostrar como funciona.
+
+CC = gcc
+CFLAGS = -g -Wall
+SRC = proyecto.c Arbol.c Arbol.h
+OBJ = proyecto.o Arbol.o
+
+
+# Reglas explicitas
+
+all: $(OBJ)
+	$(CC) $(CFLAGS) -o proyecto $(OBJ)
+clean:
+	$(RM) $(OBJ) main
+
+# Reglas implicitas
+
+Arbol.o: Arbol.c Arbol.h
+proyecto.o: proyecto.c Arbol.h

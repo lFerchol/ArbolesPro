@@ -1,0 +1,54 @@
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <gtk/gtk.h>
+//#include "Cuadros.h"
+//#include "Arboles.h"
+
+void Acerca(int argc, char *argv[])
+{
+
+	gtk_init (&argc, &argv);//Se inicia el modo gtk
+	// Se crea la ventana principal AcercaD.
+	AcercaD = gtk_window_new (GTK_WINDOW_TOPLEVEL);
+	// Le ponemos nombre a la ventana.
+	gtk_window_set_title (GTK_WINDOW (AcercaD), "Árboles");
+	// Deja la ventana estatica.
+	gtk_window_set_resizable(GTK_WINDOW(AcercaD),FALSE);
+	// Definimos la dimencion de la ventana.
+	gtk_widget_set_size_request (AcercaD,1366 , 768);
+	// Pocionamos la ventana siempre en el centro de la pantalla.
+	gtk_window_set_position(GTK_WINDOW(AcercaD), GTK_WIN_POS_CENTER);
+	// Inicializamos el contenedor.
+	marco=gtk_fixed_new(); // se declara dentro de donde va a quedar la imagen 
+	// Se agrega la ventana al marco.
+	gtk_container_add (GTK_CONTAINER(AcercaD),marco);
+	//imagenes de fondo
+	fondo=gtk_image_new_from_file("fondo.png");
+	gtk_fixed_put(GTK_FIXED(marco),fondo,-28,-70);
+	//crea el icono del programa
+	//gtk_window_set_icon(GTK_WINDOW(AcercaD), create_pixbuf("C.jpg"));
+	
+	
+	//crea los botones
+	
+	//Eliminar= gtk_button_new_with_label("           Eliminar          ");//boton para Eliminar nodos existentes
+	//gtk_fixed_put (GTK_FIXED (marco),Eliminar,1184,340);
+	//EliminarI=gtk_image_new_from_file("ELIM.png");
+	//gtk_fixed_put(GTK_FIXED(marco),EliminarI,1180,325);
+	
+	//Acciones de los botones
+	
+	//g_signal_connect (G_OBJECT (Insertar), "clicked",G_CALLBACK (Inserta_nodos),NULL);
+	//g_signal_connect (G_OBJECT (Eliminar), "clicked",G_CALLBACK (Elimina_nodos),NULL);
+
+
+	/*Acerca= gtk_button_new_with_label("Acerca de...");//boton para la ventana de programadores
+	gtk_fixed_put (GTK_FIXED (marco),Acerca,150,10);	
+	g_signal_connect (G_OBJECT (Acerca), "clicked",G_CALLBACK (AcercaD), NULL);
+	//al darle click a la funcion de programadores te manda a la ventana de AcercaD*/
+	
+	gtk_widget_show_all(AcercaD);//pone en pantalla todo lo que hay en la ventana principal
+	gtk_main();// Se cierra el modo gtk
+
+}

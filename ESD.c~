@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
+#include <string.h>
+
+int main()
+{
+	system ("clear");
+	int k=0,sw=0,j;
+	char numero[50];
+	printf("Escribe un numero:");
+	scanf("%s",numero);
+	j=strlen(numero); // contar cantidad de caracteres dentro de una cadena
+	while(k<j && sw==0)
+	{
+		if(isdigit(numero[k])!=0)
+			k++;
+		else
+			sw=1;
+	}
+	if (sw==0)
+		printf("%s es dígito\n",numero);
+	else
+		printf("%s no es dígito\n",numero);
+	//return sw;
+	return 0;
+}

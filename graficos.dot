@@ -1,0 +1,4 @@
+Digraph G {
+2 [shape=tripleoctagon,sides=8,peripheries=3,color=cadetblue,fillcolor=darkorange,style=dotted];
+2 ->1 [color=red,arrowhead=vee,arrowsize=val,margin=5];
+}

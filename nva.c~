@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <gtk/gtk.h> 
+#include <string.h>
+#define Max 10
+#define N 50
+
+int valido_car(char x1[N])
+{
+	int k=0,sw=0,j;
+	j=strlen(x1);
+	while (k<j && sw==0)
+	{	
+		if(isalpha(x1[k])!=0)
+			k++;
+		else
+			{
+			if((x1[k])==' ')
+				k++;
+			else{
+				sw=1;
+				if(tipo_dato!=5)//para que cuando seleccione discos no se imprima la ventana
+					car_inv();}
+			}
+	}
+	return sw;
+}

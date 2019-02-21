@@ -1,0 +1,12 @@
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <gtk/gtk.h>
+#include "Cuadros.h"
+
+GtkWidget *AcercaD,*marco,*marco2,*fondo,*Acerca,*ga;
+GtkWidget *Salir;
+GdkColor color;
+PangoFontDescription *fuente;
+
+void Acerca_De(int argc, char *argv[]);
